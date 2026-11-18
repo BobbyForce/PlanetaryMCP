@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "python-mcp-group-lab"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+redis = "^5.1.0"
+pyyaml = "^6.0.2"
+python-geohash = "^0.8.5"
+pandas = "^2.2.3"
+pymongo = "^4.15.0"
+mcp = { version = "^1.28.0", extras = ["cli"] }
+python-dotenv = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
