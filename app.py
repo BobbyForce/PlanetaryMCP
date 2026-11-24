@@ -35,13 +35,6 @@ def track_query_count(view_function: Callable[P, R]) -> Callable[P, R]:
 
     return wrapped
 
-
-@app.route("/", methods=["GET"])
-@track_query_count
-def get_homescreen():
-    return None
-
-
 @app.route("/guides", methods=["GET"])
 @track_query_count
 def get_planets():
