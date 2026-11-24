@@ -104,6 +104,10 @@ def get_planet_ring_status():
     )
     return jsonify(list(planets))
 
-
+@app.route("/stats", methods=["GET"])
+def get_stat():
+    key = request.args.get("key", "")
+    value = redis_conn.get(key)
+    return jsonify({"key": key, "value": value.decode() if value else None})
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8051)
